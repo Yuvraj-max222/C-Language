@@ -3,8 +3,7 @@ struct student {
     char name[50];
     int roll;
     float marks;
-};
-    
+};  
 int main() {
     struct student s[60];
     int i, n;
@@ -32,7 +31,6 @@ if (fptr == NULL) {
     printf("Error opening file!\n");
     return 1;
 }
-
 for (i = 0; i < n; i++) {
     fread(&s[i], sizeof(s[i]), 1, fptr);
     printf("Name: %s\n", s[i].name);
