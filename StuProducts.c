@@ -31,6 +31,7 @@ if (fptr == NULL) {
     printf("Error opening file!\n");
     return 1;
 }
+
 for (i = 0; i < n; i++) {
     fread(&s[i], sizeof(s[i]), 1, fptr);
     printf("Name: %s\n", s[i].name);
