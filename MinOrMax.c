@@ -14,6 +14,7 @@ int main() {
     printf("The minimum value is %d\n", *p++);
     printf("The maximum value is %d\n", *p);
 }
+
 int *maxmin (int arr[], int v) {
     int i;
     static int result_mm[2];
