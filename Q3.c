@@ -1,23 +1,23 @@
-//WACP to print Fibonacci series without using recursion by using for loop.
+//WACP using a recursive function to print the Fibonacci series.
 #include<stdio.h>
-int main() {
-    int n, i, a = 0, b = 1, c;
-    printf("Enter the value of n: ");
-    
+#include<conio.h>
+int fib(int n)
+{
+    if (n <= 1)
+        return n;
+    else
+        return fib(n - 1) + fib(n - 2);
+}
+int main()
+{
+    int n, i;
+    printf("Enter the number of terms in the Fibonacci series: ");
     scanf("%d", &n);
-    printf("The Fibonacci series is: ");
-    for(i=1;i<=n;i++) {
-        printf("%d", a);
-        if(i < n) {
-            printf(", ");
-        }
-        else {
-            printf(".\n");
-        }
-        
-        c = a + b;
-        a = b;
-        b = c;
+    printf("Fibonacci series: ");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", fib(i));
     }
+    getch();
     return 0;
 }
