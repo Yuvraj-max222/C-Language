@@ -1,19 +1,19 @@
-//WACP to check whether a number is Palindrome or not by using while and if statement
+// WACP using a recursive function to print the gcd of two numbers.
 #include<stdio.h>
-int main() {
-    int n, reversedNum = 0, remainder, originalNum;
-    printf("Enter an integer: ");
-    scanf("%d", &n);
-    originalNum = n;
-    while (n != 0) {
-        remainder = n % 10;
-        reversedNum = reversedNum * 10 + remainder;
-        n /= 10;
-    }
-    if (originalNum == reversedNum) {
-        printf("%d is a palindrome.\n", originalNum);
-    } else {
-        printf("%d is not a palindrome.\n", originalNum);
-    }
+#include<conio.h>
+int gcd(int a, int b)
+{
+    if (b == 0)
+        return a;
+    else
+        return gcd(b, a % b);
+}
+int main()
+{
+    int a, b;
+    printf("Enter two numbers to find their GCD: ");
+    scanf("%d %d", &a, &b);
+    printf("GCD of %d and %d is %d", a, b, gcd(a, b));
+    getch();
     return 0;
 }
