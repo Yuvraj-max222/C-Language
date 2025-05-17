@@ -1,23 +1,9 @@
-//WACP to find whether a number is prime or not by using for loop and if statement
 #include<stdio.h>
-int main() {
-    int n, i, flag = 0;
-    printf("Enter a positive integer: ");
-    scanf("%d", &n);
-    if (n == 0 || n == 1) {
-        printf("%d is not a prime number.\n", n);
-        return 0;
-    }
-    for (i = 2; i <= n / 2; ++i) {
-        if (n % i == 0) {
-            flag = 1;
-            break;
-        }
-    }
-    if (flag == 0) {
-        printf("%d is a prime number.\n", n);
-    } else {
-        printf("%d is not a prime number.\n", n);
-    }
+int main () {
+    int a, b, sum = 0;
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+    sum - a + b;
+    printf("Sum of %d and %d is %d\n", a, b, sum);
     return 0;
 }

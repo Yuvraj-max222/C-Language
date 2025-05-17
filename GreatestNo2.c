@@ -8,6 +8,9 @@ int main() {
     } else if(b>a) {
         printf("%d is the greatest number\n", b);
     }
+    else if(a != b) {
+        printf("Comparing %d and %d for greatest number\n", a, b);
+    }
     else {
         printf("Both numbers are equal\n");
     }
